@@ -214,9 +214,18 @@ public class Printer extends CordovaPlugin {
             @Override
             public void run() {
                 for (;;) {
-                    if (job.isCancelled() || job.isCompleted() || job.isFailed()) {
+                    /*if (job.isCancelled() || job.isCompleted() || job.isFailed()) {
                         command.success();
                         break;
+                    }*/
+                    if(job.isCompleted()) {
+                        command.success();
+                    }
+                    if(job.isCancelled()) {
+                        command.success('cancelled');
+                    }
+                    if(job.isFailed()) {
+                        command.error();
                     }
                 }
             }
