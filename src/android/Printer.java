@@ -223,7 +223,7 @@ public class Printer extends CordovaPlugin {
                         break;
                     }
                     if(job.isFailed()) {
-                        command.error();
+                        command.success("failed");
                         break;
                     }
                 }
