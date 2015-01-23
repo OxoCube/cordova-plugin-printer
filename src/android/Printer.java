@@ -218,12 +218,12 @@ public class Printer extends CordovaPlugin {
                         command.success();
                         break;
                     }*/
-                    if(job.isCompleted()) {
+                    if(job.isCompleted() || job.isCancelled()) {
                         command.success();
                     }
-                    if(job.isCancelled()) {
+                    /*if(job.isCancelled()) {
                         command.success("cancelled");
-                    }
+                    }*/
                     if(job.isFailed()) {
                         command.error();
                     }
