@@ -222,7 +222,7 @@ public class Printer extends CordovaPlugin {
                         command.success();
                     }
                     if(job.isCancelled()) {
-                        command.success('cancelled');
+                        command.success("cancelled");
                     }
                     if(job.isFailed()) {
                         command.error();
