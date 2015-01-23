@@ -215,7 +215,7 @@ public class Printer extends CordovaPlugin {
             public void run() {
                 for (;;) {
                     if(job.isCompleted()) {
-                        command.success();
+                        command.success("success");
                         break;
                     }
                     if(job.isCancelled()) {
